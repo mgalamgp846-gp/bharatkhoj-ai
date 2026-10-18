@@ -151,10 +151,10 @@
         'यह शुरुआती संस्करण है। अभी AI उत्तर और अपना सर्च इंडेक्स जुड़ा नहीं है।';
 
       const link = document.createElement('a');
-      link.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.textContent = 'वेब पर परिणाम देखें ↗';
+link.href = 'https://www.google.com/search?q=' + encodeURIComponent(query + ' site:gov.in OR site:nic.in');
+link.target = '_blank';
+link.rel = 'noopener noreferrer';
+link.textContent = 'भारतीय सरकारी स्रोतों में खोजें ↗';
 
       message.append(heading, note, link);
     }
