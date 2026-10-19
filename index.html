@@ -1,177 +1,95 @@
 
 
+ <!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1769e0">
+<title>BharatKhoj AI — भारत की खोज</title>
 <style>
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, "Noto Sans Devanagari", sans-serif;
-    color: #202124;
-    background: #ffffff;
-  }
-
-  header {
-    text-align: center;
-    padding: 28px 16px 0;
-  }
-
-  .logo {
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color: #1769e0;
-  }
-
-  .logo span {
-    color: #188038;
-    font-size: 20px;
-  }
-
-  header p {
-    margin-top: 10px;
-    color: #5f6368;
-    font-size: 15px;
-  }
-
-  main {
-    width: min(680px, 100%);
-    margin: 95px auto 0;
-    padding: 20px;
-  }
-
-  h1 {
-    text-align: center;
-    font-size: clamp(25px, 6vw, 34px);
-    font-weight: 500;
-    margin-bottom: 14px;
-  }
-
-  .intro {
-    text-align: center;
-    color: #5f6368;
-    line-height: 1.7;
-    margin-bottom: 28px;
-  }
-
-  form {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 7px;
-    border: 1px solid #dfe1e5;
-    border-radius: 32px;
-    box-shadow: 0 2px 8px #00000012;
-    background: #fff;
-  }
-
-  form:focus-within {
-    border-color: #4285f4;
-    box-shadow: 0 2px 10px #4285f426;
-  }
-
-  input {
-    flex: 1;
-    min-width: 0;
-    border: 0;
-    outline: 0;
-    background: transparent;
-    padding: 13px 15px;
-    font-size: 16px;
-  }
-
-  form button {
-    border: 0;
-    border-radius: 25px;
-    padding: 13px 19px;
-    background: #1769e0;
-    color: white;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-  form button:hover {
-    background: #0b57d0;
-  }
-
-  .topics {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 24px;
-  }
-
-  .topic {
-    border: 1px solid #dadce0;
-    background: #f8faff;
-    color: #3c4043;
-    border-radius: 22px;
-    padding: 11px 15px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-
-  .topic:hover {
-    background: #e8f0fe;
-    border-color: #c5d7fb;
-  }
-
-  #message {
-    margin-top: 32px;
-    padding: 20px;
-    border: 1px solid #e0e5ee;
-    border-radius: 18px;
-    background: #f8faff;
-    overflow-wrap: anywhere;
-  }
-
-  #message a {
-    color: #1769e0;
-    line-height: 1.8;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  footer {
-    text-align: center;
-    padding: 45px 18px 25px;
-    color: #70757a;
-    font-size: 13px;
-    line-height: 1.8;
-  }
-
-  @media (max-width: 480px) {
-    main {
-      margin-top: 55px;
-      padding: 16px;
-    }
-
-    .logo {
-      font-size: 27px;
-    }
-
-    form {
-      gap: 3px;
-    }
-
-    input {
-      padding: 12px 8px;
-      font-size: 14px;
-    }
-
-    form button {
-      padding: 12px;
-      font-size: 14px;
-    }
-
-    .topic {
-      padding: 10px 12px;
-    }
-  }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; font-family: Arial, sans-serif; color: #202124; background: #fff; }
+header { text-align: center; padding: 28px 16px 0; }
+.logo { font-size: 30px; font-weight: 700; color: #1769e0; }
+.logo span { color: #188038; font-size: 20px; }
+header p { color: #5f6368; font-size: 15px; }
+main { width: min(680px, 100%); margin: 75px auto 0; padding: 20px; }
+h1 { text-align: center; font-size: clamp(25px, 6vw, 34px); font-weight: 500; margin-bottom: 14px; }
+.intro { text-align: center; color: #5f6368; line-height: 1.7; margin-bottom: 28px; }
+form { display: flex; align-items: center; gap: 8px; padding: 7px; border: 1px solid #dfe1e5; border-radius: 32px; box-shadow: 0 2px 8px #00000012; }
+form:focus-within { border-color: #4285f4; }
+input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; padding: 13px 10px; font-size: 16px; }
+form button { border: 0; border-radius: 25px; padding: 13px 17px; background: #1769e0; color: white; font-size: 15px; cursor: pointer; }
+.topics { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.topic { border: 1px solid #dadce0; background: #f8faff; color: #3c4043; border-radius: 22px; padding: 11px 14px; font-size: 14px; cursor: pointer; }
+#message { margin-top: 30px; padding: 20px; border: 1px solid #e0e5ee; border-radius: 18px; background: #f8faff; overflow-wrap: anywhere; line-height: 1.7; }
+#message a { color: #1769e0; }
+.hidden { display: none; }
+footer { text-align: center; padding: 40px 18px 24px; color: #70757a; font-size: 13px; line-height: 1.8; }
+@media (max-width: 480px) {
+main { margin-top: 45px; padding: 16px; }
+.logo { font-size: 27px; }
+form { gap: 3px; }
+input { padding: 12px 7px; font-size: 14px; }
+form button { padding: 12px; font-size: 14px; }
+.topic { padding: 10px 12px; }
+}
 </style>
+</head>
+<body>
+<header>
+<div class="logo">🇮🇳 BharatKhoj <span>AI</span></div>
+<p>भारत की जानकारी, एक जगह</p>
+</header>
+<main>
+<h1>क्या खोजना चाहते हैं?</h1>
+<p class="intro">सवाल पूछिए और सही जानकारी के स्रोत खोजिए। हिंदी या English में शुरू करें।</p>
+<form id="searchForm">
+<input id="query" type="search" placeholder="यहाँ अपना सवाल लिखें..." aria-label="अपना सवाल लिखें" required>
+<button type="submit">खोजें 🔎</button>
+</form>
+<div class="topics">
+<button class="topic" type="button" data-q="भारत की सरकारी योजनाएँ">🏛️ सरकारी योजनाएँ</button>
+<button class="topic" type="button" data-q="भारत में शिक्षा और छात्रवृत्ति">📚 शिक्षा</button>
+<button class="topic" type="button" data-q="भारत में सरकारी नौकरियाँ">💼 नौकरियाँ</button>
+</div>
+<section id="message" class="hidden" aria-live="polite"></section>
+</main>
+<footer>
+BharatKhoj AI · भारत के लिए बनाया जा रहा एक स्वतंत्र प्रोजेक्ट
+<br>प्रारंभिक संस्करण — परिणामों की पुष्टि मूल स्रोत से करें।
+</footer>
+<script>
+const form = document.getElementById('searchForm');
+const input = document.getElementById('query');
+const message = document.getElementById('message');
+function search(q) {
+const query = q.trim();
+if (!query) return;
+message.classList.remove('hidden');
+message.replaceChildren();
+const heading = document.createElement('h3');
+heading.textContent = 'आपकी खोज: ' + query;
+const note = document.createElement('p');
+note.textContent = 'यह शुरुआती संस्करण है। अभी AI उत्तर और अपना सर्च इंडेक्स जुड़ा नहीं है।';
+const link = document.createElement('a');
+link.href = 'https://www.google.com/search?q=' + encodeURIComponent(query + ' (site:gov.in OR site:nic.in)');
+link.target = '_blank';
+link.rel = 'noopener noreferrer';
+link.textContent = 'भारतीय सरकारी स्रोतों में खोजें ↗';
+message.append(heading, note, link);
+}
+form.addEventListener('submit', function(event) {
+event.preventDefault();
+search(input.value);
+});
+document.querySelectorAll('.topic').forEach(function(button) {
+button.addEventListener('click', function() {
+input.value = button.dataset.q;
+search(input.value);
+});
+});
+</script>
+</body>
+</html>
